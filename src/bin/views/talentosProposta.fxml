@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.PropostaTalentosController">
+   <children>
+      <VBox layoutX="16.0" layoutY="26.0" prefHeight="442.0" prefWidth="615.0" spacing="40.0">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="16.0" prefWidth="611.0" text="Talentos por Proposta">
+               <font>
+                  <Font size="45.0" />
+               </font>
+            </Label>
+            <TableView fx:id="tblPropostas" prefHeight="108.0" prefWidth="615.0">
+              <columns>
+                <TableColumn fx:id="clidProposta" prefWidth="28.0" text="Id" />
+                <TableColumn fx:id="clEmpresaProposta" prefWidth="116.0" text="Empresa" />
+                  <TableColumn fx:id="clNomeProposta" prefWidth="103.0" text="Nome" />
+                  <TableColumn fx:id="clCategoriaProposta" prefWidth="103.0" text="Categoria" />
+                  <TableColumn fx:id="clHorasProposta" prefWidth="103.0" text="Horas" />
+                  <TableColumn fx:id="clDescricaoProposta" prefWidth="160.0" text="Descrição" />
+              </columns>
+               <VBox.margin>
+                  <Insets bottom="-20.0" top="-30.0" />
+               </VBox.margin>
+            </TableView>
+            <HBox spacing="20.0">
+               <children>
+                  <TextField fx:id="txtIdProposta" disable="true" opacity="0.49" promptText="Id Proposta" />
+                  <TextField fx:id="txtEmpresa" editable="false" promptText="Empresa" />
+                  <TextField fx:id="txtNomeProposta" editable="false" layoutX="179.0" layoutY="10.0" promptText="Nome" />
+                  <TextField fx:id="txtCategoriaProposta" editable="false" layoutX="348.0" layoutY="10.0" promptText="Categoria">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="-20.0" top="-10.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="214.0" spacing="20.0">
+               <children>
+                  <TextField fx:id="txtHorasProposta" editable="false" promptText="Horas" />
+                  <TextField fx:id="txtDescricaoProposta" editable="false" prefHeight="25.0" prefWidth="466.0" promptText="Descrição" />
+               </children>
+               <VBox.margin>
+                  <Insets bottom="-20.0" top="-10.0" />
+               </VBox.margin>
+            </HBox>
+            <Separator prefWidth="200.0" />
+            <Label text="Talentos para Proposta Selecionada :">
+               <VBox.margin>
+                  <Insets top="-40.0" />
+               </VBox.margin>
+            </Label>
+            <TableView fx:id="tblTalentosProposta" prefHeight="92.0" prefWidth="615.0">
+              <columns>
+                <TableColumn fx:id="clIdTalento" prefWidth="75.0" text="Id" />
+                <TableColumn fx:id="clNomeTalento" prefWidth="150.0" text="Nome" />
+                  <TableColumn fx:id="clPaisTalento" prefWidth="150.0" text="Pais" />
+                  <TableColumn fx:id="clEmailTalento" prefWidth="119.0" text="Email" />
+                  <TableColumn fx:id="clTarifaTalento" prefWidth="120.0" text="Tarifa" />
+              </columns>
+               <VBox.margin>
+                  <Insets bottom="-20.0" top="-40.0" />
+               </VBox.margin>
+            </TableView>
+            <HBox alignment="CENTER" spacing="15.0">
+               <children>
+                  <Button fx:id="btnLimpar" mnemonicParsing="false" onAction="#limpar" text="Limpar" />
+                  <Button fx:id="btnMenuFromTalentosProposta" layoutX="438.0" layoutY="10.0" mnemonicParsing="false" onAction="#goToMenuFromTalentosProposta" text="Menu" />
+               </children>
+               <VBox.margin>
+                  <Insets top="-10.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

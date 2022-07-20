@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.UtilizadoresController">
+   <children>
+      <VBox layoutX="16.0" layoutY="26.0" prefHeight="442.0" prefWidth="615.0" spacing="40.0">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="16.0" prefWidth="611.0" text="Meus Utilizadores">
+               <font>
+                  <Font size="45.0" />
+               </font>
+            </Label>
+            <TableView fx:id="tblUtilizadores" prefHeight="226.0" prefWidth="407.0">
+              <columns>
+                <TableColumn fx:id="clId" prefWidth="121.0" text="Id" />
+                <TableColumn fx:id="clNome" prefWidth="212.0" text="Nome" />
+                  <TableColumn fx:id="clPasswd" prefWidth="281.0" text="PassWord" />
+              </columns>
+            </TableView>
+            <HBox spacing="20.0">
+               <children>
+                  <TextField fx:id="txtId" promptText="Id" />
+                  <TextField fx:id="txtNome" promptText="Nome" />
+                  <TextField fx:id="txtPasswd" layoutX="179.0" layoutY="10.0" promptText="PassWord" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" spacing="15.0">
+               <children>
+                  <Button fx:id="btnSave" mnemonicParsing="false" onAction="#salvar" text="Salvar" />
+                  <Button fx:id="btnAtualizar" mnemonicParsing="false" onAction="#atualizar" text="Atualizar" />
+                  <Button fx:id="btnApagar" mnemonicParsing="false" onAction="#apagar" text="Apagar" />
+                  <Button fx:id="btnLimpart" mnemonicParsing="false" onAction="#limpar" text="Limpar" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
